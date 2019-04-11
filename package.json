@@ -1,0 +1,12 @@
+{
+  "name": "livebox",
+  "version": "2017.0.1",
+  "description": "Very basic API for sending and receiving data",
+  "author": "Hans van Arken <hansvanarken@gmail.com> (http://hans.lv)",
+  "scripts": {
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+		"jsonfile": "^4.0.0"
+  }
+}
