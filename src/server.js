@@ -2,7 +2,7 @@ var express = require('express');
 var jsonfile = require('jsonfile');
 var app = express();
 
-var memFile = "html/datafile.json";
+var memFile = "src/datafile.json";
 
 var data = [];
 
@@ -59,7 +59,12 @@ app.get('/', function (req, res) {
 });
 
 app.get('/list', function (req, res) {
-  res.send(data);
+  var s = "<table style='font-family: arial, helvetica'>";
+  data.forEach(d => {
+    s += "<tr><td>" + d.key + "</td><td>" + d.val + "</td></tr>";
+  });
+  s += "</table>";
+  res.send(s);
 });
 
 app.get('/send/:key/:val/get/:key2', function (req, res) {

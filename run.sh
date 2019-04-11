@@ -1,9 +1,9 @@
-docker stop node_server
-docker rm node_server
+docker stop ifttt-server || true 
+docker rm ifttt-server || true 
 
 docker run \
-	-it \
-	--name node_server \
-	--mount type=bind,source="$(pwd)/html",target=/var/www/html \
+	-d \
+	--name ifttt-server \
+	--mount type=bind,source="$(pwd)/src",target=/var/www/src \
 	-p 12345:12345 \
-	node_server;
+	ifttt-server;

@@ -1,0 +1,1 @@
+docker exec -it ifttt-server pm2 monit

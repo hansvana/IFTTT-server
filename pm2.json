@@ -1,0 +1,6 @@
+{
+  "name": "IFTTT-server",
+  "script": "src/server.js",
+  "instances": "1",
+  "watch": true
+}

@@ -1,6 +1,6 @@
 {
-  "name": "livebox",
-  "version": "2017.0.1",
+  "name": "IFTTT-server",
+  "version": "2019.0.1",
   "description": "Very basic API for sending and receiving data",
   "author": "Hans van Arken <hansvanarken@gmail.com> (http://hans.lv)",
   "scripts": {

@@ -1,16 +1,11 @@
-FROM node:latest
+FROM keymetrics/pm2:latest-alpine
 
 WORKDIR /var/www
-ADD package.json /var/www/package.json
-ADD server.js /var/www/server.js
-ADD nodemon.json /var/www/nodemon.json
+COPY package.json /var/www/package.json
+COPY pm2.json /var/www/pm2.json
 
-RUN npm install nodemon -global
 RUN npm install
 
 EXPOSE 12345
 
-CMD ["nodemon", "-L", "/var/www/server.js"]
-
-
-
+CMD ["pm2-runtime", "start", "pm2.json"]
